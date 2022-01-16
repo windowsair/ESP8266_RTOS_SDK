@@ -344,7 +344,7 @@ esp_err_t mdns_query_a(const char * host_name, uint32_t timeout, ip4_addr_t * ad
  *     - ESP_ERR_NO_MEM         memory error
  *     - ESP_ERR_INVALID_ARG    parameter error
  */
-esp_err_t mdns_query_aaaa(const char * host_name, uint32_t timeout, ip6_addr_t * addr);
+// esp_err_t mdns_query_aaaa(const char * host_name, uint32_t timeout, ip6_addr_t * addr);
 
 /**
  * @brief   System event handler

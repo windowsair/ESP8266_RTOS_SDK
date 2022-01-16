@@ -3,7 +3,6 @@ menu "mDNS"
     config ENABLE_MDNS
         bool "Enable mDNS"
         default n
-        select LWIP_IPV6
         help
             Enable this option and then mDNS is to be used.
 

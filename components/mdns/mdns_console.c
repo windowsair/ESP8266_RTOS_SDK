@@ -156,22 +156,22 @@ static int cmd_mdns_query_aaaa(int argc, char** argv)
     return 0;
 }
 
-static void register_mdns_query_aaaa()
-{
-    mdns_query_a_args.hostname = arg_str1(NULL, NULL, "<hostname>", "Hostname that is searched for");
-    mdns_query_a_args.timeout = arg_int0("t", "timeout", "<timeout>", "Timeout for this query");
-    mdns_query_a_args.end = arg_end(2);
+// static void register_mdns_query_aaaa()
+// {
+//     mdns_query_a_args.hostname = arg_str1(NULL, NULL, "<hostname>", "Hostname that is searched for");
+//     mdns_query_a_args.timeout = arg_int0("t", "timeout", "<timeout>", "Timeout for this query");
+//     mdns_query_a_args.end = arg_end(2);
 
-    const esp_console_cmd_t cmd_init = {
-        .command = "mdns_query_aaaa",
-        .help = "Query MDNS for IPv6",
-        .hint = NULL,
-        .func = &cmd_mdns_query_aaaa,
-        .argtable = &mdns_query_a_args
-    };
+//     const esp_console_cmd_t cmd_init = {
+//         .command = "mdns_query_aaaa",
+//         .help = "Query MDNS for IPv6",
+//         .hint = NULL,
+//         .func = &cmd_mdns_query_aaaa,
+//         .argtable = &mdns_query_a_args
+//     };
 
-    ESP_ERROR_CHECK( esp_console_cmd_register(&cmd_init) );
-}
+//     ESP_ERROR_CHECK( esp_console_cmd_register(&cmd_init) );
+// }
 
 static struct {
     struct arg_str *instance;
@@ -1049,7 +1049,7 @@ void mdns_console_register()
     register_mdns_service_remove_all();
 
     register_mdns_query_a();
-    register_mdns_query_aaaa();
+    // register_mdns_query_aaaa();
     register_mdns_query_txt();
     register_mdns_query_srv();
     register_mdns_query_ptr();
