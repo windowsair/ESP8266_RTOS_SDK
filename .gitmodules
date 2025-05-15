@@ -16,6 +16,6 @@
 
 [submodule "components/coap/libcoap"]
 	path = components/coap/libcoap
-	url = ../../obgm/libcoap.git
+	url = https://github.com/windowsair/libcoap.git
 [submodule "components/coap/libcoap/ext/tinydtls"]
 	url = https://github.com/eclipse-tinydtls/tinydtls.git
